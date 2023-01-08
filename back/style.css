@@ -20,7 +20,8 @@ body{
     transform: scale(0);
     transition: 200ms ease-in-out;
     z-index: 1000;
-    background-color: white;
+    background-color: rgb(209, 60, 60);
+    background-image: url(img/arsen.png);
     width: 500px;
     height: 100vh;
     color: white;
@@ -81,8 +82,6 @@ body{
 .burger-menu{
     background-color: red;
 }
-
-
  /*BURGER MENU FULLSCREEN MODAL STYLE */
 .modal.burger {
     position: fixed;
@@ -126,6 +125,7 @@ body{
     width: 80%;
     border: 0;
     border-bottom: 1px solid black;
+    background-color: transparent;
     outline: none;
     height: 2rem;
     font-size: 1.25rem;
@@ -140,7 +140,7 @@ textarea:focus, input:valid{
     border-color: red;
 }
 /* input labels */
-.login .formBody label{
+/* .login .formBody label{
     color: rgba(0, 0, 0, .5);
     position: absolute;
     transform: translateY(7px);
@@ -157,7 +157,7 @@ textarea:focus, input:valid{
   transform: translateY(-15px);
   font-size: .75rem;
   transition:200ms ease-in-out;
-}
+} */
 
 /* login button */
 .login button {
@@ -215,6 +215,11 @@ textarea:focus, input:valid{
     z-index: 100;
     transition: 300ms linear;
 }
+.navLogoLinks {
+    display: flex;
+    justify-content: space-between;
+    width: 1240px;
+}
 .navbar-links {
     display: flex;
     flex-direction: column;
@@ -261,6 +266,11 @@ textarea:focus, input:valid{
     border-bottom: 5px solid white;
     padding-bottom: 0px;
 }
+.nav-section:hover li:not(:hover){
+    opacity: .7;
+}
+
+
 .toggle-button {
     display: none;
     flex-direction: column;
@@ -381,6 +391,18 @@ section.news-section {
     grid-gap: 10px;
     padding: 0px 15px;
 }
+/* section.news-section .seeMore {
+    width: auto;
+    height: 300px;
+    background-color: black;
+    display: none;
+}
+.seeMore h1{
+    font-size: 5rem;
+    color: white;
+    opacity: .3;
+} */
+
 section div {
 grid-column: span 3;
 }
@@ -395,13 +417,20 @@ grid-column: span 2;
     max-height: 500px;
     position: relative;
 }
-.card.card-bg:hover .card-image img{
+/* .card.card-bg:hover .card-image img{
     transform: scale(1.05);
     transition: 400ms linear;
+} */
+.news-section:hover .card:not(:hover){
+    opacity: .5;
+    transform: scale(.99);
+    transition: 200ms linear;
 }
 .card.card-bg .card-image img {
     max-width: 100%;
     transition: 400ms linear;
+    object-fit: cover;
+    object-position: center;
 }
 .card.card-bg .card-image {
     overflow: hidden;
@@ -443,6 +472,7 @@ grid-column: span 2;
     background-color: black;
     padding-bottom: 5px;
 }
+
 @media (max-width: 1024px){
     .news-container {
         display: block;
@@ -475,6 +505,11 @@ grid-column: span 2;
     .card.card-bg:hover .card-image img{
         transform: none;
     }
+    /* section.news-section .seeMore {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
 }
 
 .filler2 {

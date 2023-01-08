@@ -1,0 +1,178 @@
+:root {
+    --body-bg: rgb(23, 23, 23);
+    --card-bg: rgb(68, 68, 68);
+    --header: rgb(218, 0, 55);
+    --text: rgb(237, 237, 237);
+    --nav: rgb(219, 0, 7);
+}
+@media (prefers-color-scheme: light) {
+    :root {
+    --body-bg: #fff;
+    --card-bg: rgb(220, 219, 219);
+    --header: rgb(0, 0, 0);
+    --text: rgb(0, 0, 0);
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--body-bg);
+}
+h1,h2,h3,h4,h5,h6 {
+    color: var(--text);
+}
+p {
+    color: var(--text);
+}
+a {
+    color: var(--text);
+}
+/* header */
+header {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(35, 35, 35);
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 10vw;
+}
+header .socialsLog {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+header .socialMedia {
+    display: flex;
+    column-gap: 10px;
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+header .socialMedia ion-icon {
+    font-size: 1.25rem;
+    color: var(--text);
+}
+header .account {
+    margin-right: 15px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+header .account p{
+    margin: 0px 15px;
+}
+header .account ion-icon{
+    font-size: 24px;
+    margin-left: 5px;
+    color: var(--text);
+}
+
+
+/* navigation logo and links */
+nav {
+    width: 100%;
+    /* background-color: var(--nav); */
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+nav .navLogoLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin: 0px 10vw;
+    height: 100%;
+}
+
+/* navigation logo */
+.brand-title #nav-logo {
+    position: absolute;
+    margin: 3px;
+    top: 0;
+    height: 120px;
+}
+/*links layout */
+.nav-section ul {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    align-items: center;
+}
+/* navigation section styles */
+.nav-section li {
+    margin: 0 15px;
+    border-bottom: 5px solid transparent;
+}
+.nav-section li:hover {
+    border-bottom: 5px solid var(--text);
+}
+.nav-section ul:hover a:not(:hover) {
+    opacity: .4;
+}
+.toggle-button {
+    /* display: none; */
+    position: absolute;
+    display: none;
+    font-size: 2rem;
+    right: 2rem;
+}
+@media (max-width: 1200px) {
+    .toggle-button {
+        display: flex;
+        top: 1%;
+    }
+    .toggle-button ion-icon {
+        font-size: 3rem;
+    }
+    .nav-section {
+        display: none;
+        transition: 200ms;
+    }
+    .nav-section.active {
+        display: flex;
+        transition: 200ms;
+    }
+    .navLogoLinks{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-section > ul {
+        width: 100vw;
+        flex-direction: column;
+    }
+    nav .nav-section ul li a{
+        /* display: none; */
+        border-bottom: 0px;
+    }
+    .nav-section *{
+        padding: .35rem 1rem;
+    }
+    .brand-title #nav-logo{
+        position: absolute;
+        left: 5%;
+        top: 1%;
+        height: 50px;
+    }
+    .socialsLog .socialMedia {
+        display: none;
+    }
+    header {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 15vw;
+    }
+}
+
+
+

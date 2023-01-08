@@ -1,0 +1,5 @@
+https://m2.material.io/design --design
+https://animista.net/ --animations
+https://picular.co/ --color palettes
+https://airbnb.design/lottie/	--svg
+https://ionic.io/ionicons --icons
